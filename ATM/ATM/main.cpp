@@ -17,8 +17,7 @@ int main() {
     //0. 입력을 받아 저장한다.
     for(int i = 0; i < person; i++) {
         scanf("%d", &vec[i]);
-    }
-    //1. 배열을 오름차순으로 정렬
+    }//    //1. 배열을 오름차순으로 정렬
     sort(vec.begin(), vec.end(), less<int>() );
     
     //2. 각 배열을 중첩하여 더한다.
