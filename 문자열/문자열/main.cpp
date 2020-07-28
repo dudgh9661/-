@@ -36,5 +36,6 @@ int main() {
     }
     
     cout << minimum << endl;
+    
     return 0;
 }
