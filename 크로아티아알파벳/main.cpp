@@ -62,6 +62,6 @@ int main() {
 
     // printf("test : %d %d\n", vec[6], vec[7]);
     // printf("cnt : %d", cnt);
-    printf("answer : %d", answer);
+    printf("%d\n", answer);
     return 0;
 }
