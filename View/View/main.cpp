@@ -39,7 +39,7 @@ int RDFS( int height, int ground, int flag, int cnt) {
     } else if ( arr[height][right] == 1 ) {
         flag = 1;
         return flag;
-    }
+    }ㅂ
     
     return flag;
 }
