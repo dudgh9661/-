@@ -46,6 +46,6 @@ int *ptr = new int[1]; // ptr -> 데이터 영역, *ptr -> 힙 영역에 저장�
 
 -----
 ### vector erase 사용할 때 주의할 점
-
+![erase](./images/erase.jpeg)
 
 
