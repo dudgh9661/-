@@ -60,5 +60,12 @@ vector<int> abc{1,2,3,4,5};
         abc[i+1] = tmp;
         tmp = tmp2;
     }
+    
+//그냥 이렇게하면 편하긴 함
+for(int i = 5; i > 0; i--) {
+        abc[i] = abc[i-1];
+    }
+
+abc[0] = 0;
 ```
 
