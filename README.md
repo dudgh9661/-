@@ -47,3 +47,25 @@ int *ptr = new int[1]; // ptr -> 데이터 영역, *ptr -> 힙 영역에 저장�
 -----
 ### vector erase 사용할 때 주의할 점
 <img src="./images/erase.jpeg" width="700" height="700">
+
+------
+### vector 요소 옆으로 옮기기 
+
+```
+vector<int> abc{1,2,3,4,5};
+    int tmp = abc[0];
+    int tmp2 = 0;
+    for(int i = 0; i < 4; i++) {
+        tmp2 = abc[i+1]; // 1
+        abc[i+1] = tmp;
+        tmp = tmp2;
+    }
+    
+//그냥 이렇게하면 편하긴 함
+for(int i = 5; i > 0; i--) {
+        abc[i] = abc[i-1];
+    }
+
+abc[0] = 0;
+```
+
