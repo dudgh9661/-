@@ -72,5 +72,6 @@ abc[0] = 0;
 ----
 ### BST vs max/minheap
 BST : 자기보다 작은 놈 왼쪽, 큰 놈 오른쪽
+
 heap : max 또는 min 값을 빠르게 찾아내기 위한 자료구조, complete binary tree로 
 
