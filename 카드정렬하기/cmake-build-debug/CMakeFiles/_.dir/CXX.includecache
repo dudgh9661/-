@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/kim_yeongho/Desktop/Desktop/practice/pr_1/강의실배정/main.cpp
-stdio.h
+/Users/kim_yeongho/Desktop/Desktop/practice/pr_1/카드정렬하기/main.cpp
+iostream
 -
-stdlib.h
+vector
+-
+queue
 -
 

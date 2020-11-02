@@ -44,7 +44,6 @@ void search() {
 
     for(int i = 1; i < vec.size(); i++) {
         int t = pq.top();
-        cout << "t: " << t << endl;
         if( t  > vec[i].s ) { //강의실 1개 더 필요
             pq.push(vec[i].t);
         }
@@ -66,3 +65,4 @@ int main() {
 
     return 0;
 }
+
