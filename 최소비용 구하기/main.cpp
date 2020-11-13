@@ -68,10 +68,34 @@ void dijk(int start) {
         }
     }
 }
+void dijk2(int start) {
+    pq.push({0, start});
+    tmp[start] = 0;
 
+    for(int i = 1; i <= N; i++) { //시작점과 인접한 노드들을 우선순위큐에 넣는다.
+        pq.push({arr[start][i], i});
+    }
+
+    while( !pq.empty() ) {
+        int current = pq.top().second; //시작점과 가장 가까운 노드
+        int dist = pq.top().first;
+        pq.pop(); //pop한다는 것은 방문을 의미.
+
+        for(int i = 1; i <= N; i++) {
+            int nextDist = tmp[i] + dist; //시작점에서 인접노드 i까지의 최단 거리 + 인접노드 i부터 현재 노드까지의 거리
+            if( dist > nextDist ) { //맨처음 노드 -> 현재노드까지 직통 거리 > 돌아서오는 거리
+                tmp[current] = nextDist; //바꾼다.
+                pq.push({nextDist, i}); //push한다는 것은, 방문 대기 목록에 넣는 것.
+            }
+        }
+    }
+
+}
 
 int main() {
     init();
+//    Print();
+//    dijk2(resF);
     dijk(resF);
     cout << arr[resF][resT] << endl;
 
