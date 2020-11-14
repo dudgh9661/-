@@ -1,6 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/kim_yeongho/Desktop/Desktop/practice/pr_1/카펫
-CMake Error at CMakeLists.txt:2 (project):
-  project PROJECT called with incorrect number of arguments
-
-
--- Configuring incomplete, errors occurred!
