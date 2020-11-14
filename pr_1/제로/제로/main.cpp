@@ -5,12 +5,12 @@ using namespace std;
 int main()
 {
     
-    freopen("input.txt", "r", stdin);
+//    freopen("input.txt", "r", stdin);
     stack<int> stack;
     int input = 0;
     int test = 0;
     int test_case = 0;
-    scanf("%d", &test_case);
+//    scanf("%d", &test_case);
     for( int i = 0; i < test_case; i++)
     {
         
@@ -46,7 +46,7 @@ int main()
         stack.pop();
     }
     
-    printf("#%d %d\n",i+1, sum);
+//    printf("#%d %d\n",i+1, sum);
         
         
     }
