@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+=======
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+>>>>>>> f03da40bb026aaa32ae6e03716ce50677fdf179d
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated />
   </component>
@@ -9,6 +30,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f372c722-ae31-4dc4-a844-2560c295122e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/pr_1/퇴사/퇴사.xcodeproj/project.pbxproj" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pr_1/퇴사/퇴사.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
@@ -20,6 +42,9 @@
       <change beforePath="$PROJECT_DIR$/pr_1/퇴사/main.dSYM/Contents/Info.plist" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pr_1/퇴사/main.dSYM/Contents/Resources/DWARF/main" beforeDir="false" />
     </list>
+=======
+    <list default="true" id="d8c3fec7-76a3-4880-a1ed-2615eb3fd081" name="Default Changelist" comment="" />
+>>>>>>> f03da40bb026aaa32ae6e03716ce50677fdf179d
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,22 +53,45 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/pr_1" />
   </component>
   <component name="ProjectId" id="1g5Nk2dUX8kIycrX6223S9sorpu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gIlm9KFeF8EuG9s2QcysBvcEB2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+>>>>>>> f03da40bb026aaa32ae6e03716ce50677fdf179d
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+=======
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+>>>>>>> f03da40bb026aaa32ae6e03716ce50677fdf179d
   </component>
   <component name="RunManager">
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
@@ -55,22 +103,44 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="f372c722-ae31-4dc4-a844-2560c295122e" name="Default Changelist" comment="" />
       <created>1597400633438</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597400633438</updated>
       <workItem from="1597400664216" duration="221000" />
+=======
+      <changelist id="d8c3fec7-76a3-4880-a1ed-2615eb3fd081" name="Default Changelist" comment="" />
+      <created>1597810143940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597810143940</updated>
+      <workItem from="1597810145731" duration="202000" />
+>>>>>>> f03da40bb026aaa32ae6e03716ce50677fdf179d
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
   <component name="WindowStateProjectService">
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597400829261">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1597400829261" />
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> f03da40bb026aaa32ae6e03716ce50677fdf179d
   </component>
 </project>
