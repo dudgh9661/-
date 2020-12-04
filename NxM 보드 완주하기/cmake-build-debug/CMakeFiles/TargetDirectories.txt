@@ -1,0 +1,3 @@
+/Users/kim_yeongho/Desktop/Desktop/practice/NxM 보드 완주하기/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/NxM 보드 완주하기/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/NxM 보드 완주하기/cmake-build-debug/CMakeFiles/NxM__.dir
