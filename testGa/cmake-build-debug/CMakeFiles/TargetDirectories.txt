@@ -1,0 +1,3 @@
+/Users/kim_yeongho/Desktop/Desktop/practice/testGa/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/testGa/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/testGa/cmake-build-debug/CMakeFiles/testGa.dir
