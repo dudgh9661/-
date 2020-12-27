@@ -11,7 +11,7 @@
 
 -----
 
-#### cmp 함수 주의할 점!
+### cmp 함수 주의할 점!
 sort의 cmp함수는 Strict Weak Ordering을 따른다.
 
 이 조건 중, 반드시 R(a,a) = false 이어야 하는 조건이 있으므로 if ( a == b ) return true; 로 하게 되면 오류가 발생한다.
