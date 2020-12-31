@@ -95,7 +95,7 @@ heap : max 또는 min 값을 빠르게 찾아내기 위한 자료구조, complet
 ----
 ### BFS vs 다익스트라 알고리즘
 BFS는 모든 간선의 가중치가 동일할 때, 다익스트라는 동일하지 않을 때 사용하면 됩니다.
-트리의 경우에는 두 정점을 잇는 경로가 유일하기 때문에 가중치의 유무에 상관 없이 BFS를 해도 되고, 심지어는 BFS가 아니라 DFS를 해도 됩니다. 거리가 '갱신되는' 과정 자체가 없기 때문입니다.
+'트리의 경우'에는 두 정점을 잇는 경로가 유일하기 때문에 가중치의 유무에 상관 없이 BFS를 해도 되고, 심지어는 BFS가 아니라 DFS를 해도 됩니다. 거리가 '갱신되는' 과정 자체가 없기 때문입니다.
 
 "그래프일 경우"
 
@@ -107,3 +107,17 @@ BFS는 모든 간선의 가중치가 동일할 때, 다익스트라는 동일하
 "트리인 경우"
 
 DFS or BFS
+
+####"다익스트라 알고리즘에서 if( d[cur] < dist ) continue는 왜 존재해야하는가?"
+
+```
+   if( d[cur] < dist ) continue; //예를 들어, 1->des 거리가 2, 1->cur가 3이면, 1->cur->des를 비교해봤자 의미가 없으므로 pass.
+        for(int i = 0; i < map[cur].size(); i++) {
+            int nextDist = dist + map[cur][i].first;
+            int next = map[cur][i].second;
+            if( d[next] > nextDist ) {
+                d[next] = nextDist;
+                pq.push({nextDist, next});
+            }
+        }
+```
