@@ -108,7 +108,7 @@ BFS는 모든 간선의 가중치가 동일할 때, 다익스트라는 동일하
 
 DFS or BFS
 
-##### "다익스트라 알고리즘에서 if( d[cur] < dist ) continue는 왜 존재해야하는가?"
+#### "다익스트라 알고리즘에서 if( d[cur] < dist ) continue는 왜 존재해야하는가?" 
 
 ```
    if( d[cur] < dist ) continue; //예를 들어, 1->des 거리가 2, 1->cur가 3이면, 1->cur->des를 비교해봤자 의미가 없으므로 pass.
