@@ -111,7 +111,7 @@ DFS or BFS
 #### "다익스트라 알고리즘에서 if( d[cur] < dist ) continue는 왜 존재해야하는가?" 
 
 ```
-   if( d[cur] < dist ) continue; //예를 들어, 1->des 거리가 2, 1->cur가 3이면, 1->cur->des를 비교해봤자 의미가 없으므로 pass.
+***   if( d[cur] < dist ) continue; ***
         for(int i = 0; i < map[cur].size(); i++) {
             int nextDist = dist + map[cur][i].first;
             int next = map[cur][i].second;
@@ -121,3 +121,13 @@ DFS or BFS
             }
         }
 ```
+<img src="./images/dijstra.jpeg" width="700" height="700">
+cur과 dist를 뽑아보면,
+
+1번째 (0, 0) //current, distance
+
+2번째 (2, 1)
+
+3번째 (3, 2)
+
+4번째 (3, 100) <== 이 때를 위한 코드이다. 즉, 같은 정점이 여러번 뽑힐 수가 있고 2번째 뽑힌 정점은 이미 첫번째 뽑힌 시점보다 꾸진 시점이라 주변 간선을 다시 보는 행위가 필요없기 때문이다.
