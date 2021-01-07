@@ -36,7 +36,7 @@ void dijstra() {
         int curDis = pq.top().second;
         pq.pop();
 
-//        if( d[cur] <= curDis ) continue;
+//        if( d[cur] < curDis ) continue;
         for(int i = 0; i < vec[cur].size(); i++) {
             int nextNode = vec[cur][i].first;
             int nextDist = vec[cur][i].second;
