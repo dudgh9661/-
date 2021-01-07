@@ -121,7 +121,7 @@ DFS or BFS
             }
         }
 ```
-<img src="./images/dijstra.jpeg" width="500" height="500">
+<img src="./images/dijstra.jpeg" width="400" height="250">
 cur과 dist를 뽑아보면,
 
 1번째 (0, 0) //current, distance
