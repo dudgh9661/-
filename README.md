@@ -108,26 +108,34 @@ BFS는 모든 간선의 가중치가 동일할 때, 다익스트라는 동일하
 
 DFS or BFS
 
-#### "다익스트라 알고리즘에서 if( d[cur] < dist ) continue는 왜 존재해야하는가?" 
+#### "다익스트라 알고리즘에서 if( d[cur] < curDis ) continue는 왜 존재해야하는가?" 
 
 ```
-***   if( d[cur] < dist ) continue; ***
-        for(int i = 0; i < map[cur].size(); i++) {
-            int nextDist = dist + map[cur][i].first;
-            int next = map[cur][i].second;
-            if( d[next] > nextDist ) {
-                d[next] = nextDist;
-                pq.push({nextDist, next});
+while( !pq.empty() ) {
+        int cur = pq.top().first;
+        int curDis = pq.top().second;
+        pq.pop();
+
+    *** if( d[cur] < curDis ) continue; ***
+        for(int i = 0; i < vec[cur].size(); i++) {
+            int nextNode = vec[cur][i].first;
+            int nextDist = vec[cur][i].second;
+
+            int newDist = nextDist + d[cur];
+            if( d[nextNode] > newDist ) {
+                d[nextNode] = newDist;
+                pq.push({nextNode, newDist});
             }
         }
+    }
 ```
 <img src="./images/dijstra.jpeg" width="400" height="250">
-cur과 dist를 뽑아보면,
+위 그림과 같은 상황에서, cur과 curDis를 뽑아보면
 
-1번째 (0, 0) //current, distance
+1번째 (0, 0) //cur, curDis
 
 2번째 (2, 1)
 
 3번째 (3, 2)
 
-4번째 (3, 100) <== 이 때를 위한 코드이다. 즉, 같은 정점이 여러번 뽑힐 수가 있고 2번째 뽑힌 정점은 이미 첫번째 뽑힌 시점보다 꾸진 시점이라 주변 간선을 다시 보는 행위가 필요없기 때문이다.
+4번째 (3, 100) <== 이 때를 위한 코드이다. 즉, 같은 정점이 여러번 뽑힐 수가 있고 2번째 뽑힌 정점(3,100)은 이미 정점이 첫번째로 뽑힌 시점(3,2)보다 꾸진 시점이라 주변 간선을 다시 보는 행위가 필요없기 때문이다.
