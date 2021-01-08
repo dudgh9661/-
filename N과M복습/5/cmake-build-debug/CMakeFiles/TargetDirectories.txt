@@ -1,0 +1,3 @@
+/Users/kim_yeongho/Desktop/Desktop/practice/N과M복습/5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/N과M복습/5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/N과M복습/5/cmake-build-debug/CMakeFiles/5.dir
