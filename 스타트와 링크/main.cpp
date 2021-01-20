@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 int N;
 int MIN = 1e9;
 
