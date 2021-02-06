@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kim_yeongho/Desktop/Desktop/practice/DFS and BFS/main.cpp
+iostream
+-
+vector
+-
+cstdio
+-
+queue
+-
+
