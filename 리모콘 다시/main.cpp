@@ -3,7 +3,6 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-#include <string>
 
 using namespace std;
 
@@ -33,28 +32,45 @@ bool isPossible(int num) {
 
     return true;
 }
-int button() { //10개 버튼이 다 고장나지 않은 경우를 전제로 한다.
+int button(int limit) { //10개 버튼이 다 고장나지 않은 경우를 전제로 한다.
     int targetPlus = target;
+
     int targetMinus = target;
 
-    int cnt = 0;
-
     while(1) {
-        if ( isPossible(targetMinus - cnt) ) {
-            return to_string(targetMinus - cnt).size() + abs(targetMinus - cnt - target);
-        } else if( isPossible(targetPlus + cnt) ) {
-            return to_string(targetPlus+cnt).size() + abs(targetPlus + cnt - target);
+        if( to_string(targetPlus).size() + abs(targetPlus - target) > limit ) {
+            targetPlus = 1e9;
+            break;
         }
-        else cnt++;
-
+        if( isPossible(targetPlus) ) {
+            break;
+        } else targetPlus++;
     }
+    while(1) {
+        if( targetMinus < 0 ) {
+            targetMinus = 1e9;
+            break;
+        }
+        if( isPossible(targetMinus) ) {
+            break;
+        } else targetMinus--;
+    }
+
+//    printf("plus : %d , minus : %d\n", targetPlus, targetMinus);
+
+    int resultPlus = to_string(targetPlus).size() + abs(targetPlus - target);
+    int resultMinus = to_string(targetMinus).size() + abs(targetMinus - target);
+    int MIN = min(resultPlus, resultMinus);
+
+//    cout << " MIN : " << MIN << endl;
+    return MIN;
 }
 int main() {
     init();
     int answer;
     int _default = abs(target - 100);
     if( _default == 0 ) {
-        cout << "0" << endl;
+        cout << 0 << endl;
         return 0;
     }
     if( broken.size() == 10 ) {
@@ -62,9 +78,8 @@ int main() {
         cout << answer << endl;
         return 0;
     }
-    int res = button();
+    int res = button(_default);
     answer = min(_default, res);
     cout << answer << endl;
     return 0;
 }
-
