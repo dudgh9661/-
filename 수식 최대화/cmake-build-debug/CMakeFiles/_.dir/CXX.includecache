@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kim_yeongho/Desktop/Desktop/practice/수식 최대화/main.cpp
+string
+-
+vector
+-
+queue
+-
+stack
+-
+algorithm
+-
+cmath
+-
+iostream
+-
+
