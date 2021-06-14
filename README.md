@@ -161,7 +161,19 @@ for(int i = 0; i < que.size(); i++) {
 
 # JAVA
 -----
+### vector<int> vec[]와 같이, ArrayList를 선언하는 법
+
+```
+ArrayList<E>[] arrayList = new ArrayList[N]; //N개의 ArrayList<E> 배열을 선언하고,
+for(int i = 0; i < N; i++) {
+	arrayList[i] = new ArrayList<E>(); //각 배열마다, ArrayList 클래스를 만들어준다..?
+	}
+```
+
+
+-----
 ### comparable VS comparator
+
 comparable은 interface이므로, 상속받아서 그 compareTo 함수를 Override해서 사용한다.
 
 하지만, comparator는 class이므로 그 자체가 기준이 될 수 있다. 다시 말해, 다른 곳에서 class의 compare를 Override해서 기준으로써 사용할 수 있다.
