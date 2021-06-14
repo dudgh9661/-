@@ -1,4 +1,4 @@
-# SW_practice
+# C++
 
 -----
 ### Edge Test Case 작성 요령
@@ -158,3 +158,27 @@ for(int i = 0; i < que.size(); i++) {
 }
 ```
 -----
+
+# JAVA
+-----
+### comparable VS comparator
+comparable은 interface이므로, 상속받아서 그 compareTo 함수를 Override해서 사용한다.
+
+하지만, comparator는 class이므로 그 자체가 기준이 될 수 있다. 다시 말해, 다른 곳에서 class의 compare를 Override해서 기준으로써 사용할 수 있다.
+
+
+Ex)
+```
+PriorityQueue<node> pq = new PriorityQueue<>(new Comparator<node>() {
+
+            @Override
+            public int compare(node a, node b) {
+                if(a.value > b.value) return 1; //*** 양수를 반환할 경우, 위치를 바꾼다. 즉 이 코드의 경우엔 a.value가 클 경우 위치가 바뀐다.
+						//    반대로, a.value < b.value이면, a.value가 작은 경우 위치가 바뀐다.
+//                else if( a.value > b.value) return -1;
+                else return -1; 
+            }
+        })
+```
+
+
