@@ -169,6 +169,8 @@ for(int i = 0; i < N; i++) {
 	arrayList[i] = new ArrayList<E>(); //각 배열마다, ArrayList 클래스를 만들어준다..?
 	}
 ```
+	
+for문을 돌리지 않으면, ArrayList<E> ar; <-- 이렇게만 선언해놓은 것과 같다. 그렇기 때문에 new 생성자를 통해 참조값을 할당해주어야 사용이 가능하다.
 
 
 -----
