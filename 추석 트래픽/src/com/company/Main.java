@@ -145,10 +145,7 @@ class Solution {
         hour = (int)(startTime / 3600);
         min = (int)(startTime % 3600) / 60;
         sec =(startTime % 3600) % 60;
-        //소수점 가공
-//        sec *= 1000;
-//        sec = Math.floor(sec);
-//        sec /= 1000;
+
         String res = hour + ":" + min + ":" + sec;
         return res;
     }
