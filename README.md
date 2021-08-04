@@ -13,6 +13,26 @@
 1. BFS 구현할 때, que.pop()을 자주 빼먹는다.
 2. 범위 검사할 때, 실수하지 말자
 3. 배열 사이즈 선언을 실수할 때가 있다.
+4. BFS로 최단 거리를 구할 때, 최초로 진입하는 r,c를 한번 더 방문하지 않도록 구현하는 것이 안전하다.
+```
+void BFS (int sr, int sc ) {
+	while ( !que.empty() ) {
+        int r = que.front().first;
+        int c = que.front().second;
+        que.pop();
+	
+	for(int i = 0; i < 4; i++) {
+            int nr = r + UD[i];
+            int nc = c + LR[i];
+
+            *** if ( nr == sr && nc == sc ) continue; ***
+	    
+	    ...
+	 	}
+	}
+}
+	
+```
 -----
 
 
