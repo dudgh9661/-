@@ -14,6 +14,9 @@
 2. 범위 검사할 때, 실수하지 말자
 3. 배열 사이즈 선언을 실수할 때가 있다.
 4. BFS로 최단 거리를 구할 때, 최초로 진입하는 r,c를 한번 더 방문하지 않도록 구현하는 것이 안전하다.
+
+<strong>소스 예시</strong>
+
 ```
 void BFS (int sr, int sc ) {
 	while ( !que.empty() ) {
@@ -33,8 +36,31 @@ void BFS (int sr, int sc ) {
 }
 	
 ```
------
 
+5. BFS 구현 시, 최초로 Queue에 push할 바로 그 때 적용되는 case에 대해서의 처리 여부를 반드시 확인할 것
+
+<strong>소스 예시</strong>
+```
+void BFS (int sr, int sc) {
+    queue<pair<int,int>> que;
+    int sheepCnt = 0, wolfCnt = 0;
+
+    // 이 부분을 말하는 것!!!!
+    if (arr[sr][sc] == 'v') {
+        wolfCnt++;
+    } else if ( arr[sr][sc] == 'o') {
+        sheepCnt++;
+    }
+    visited[sr][sc] = true;
+
+    que.push({sr,sc});
+
+
+    while (!que.empty()) {
+        int r = que.front().first;
+        int c = que.front().second;
+        que.pop();
+```
 
 -----
 
