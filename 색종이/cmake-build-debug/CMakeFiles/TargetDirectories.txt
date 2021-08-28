@@ -1,0 +1,3 @@
+/Users/kim_yeongho/Desktop/Desktop/practice/색종이/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/색종이/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kim_yeongho/Desktop/Desktop/practice/색종이/cmake-build-debug/CMakeFiles/_.dir
