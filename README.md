@@ -205,6 +205,12 @@ for(int i = 0; i < que.size(); i++) {
 ```
 -----
 
+### 정렬 커스텀 시, const와 reference를 쓰는 이유 
+
+https://www.inflearn.com/questions/23817
+
+-----
+
 # JAVA
 -----
 ### vector<int> vec[]와 같이, ArrayList를 선언하는 법
