@@ -62,6 +62,23 @@ void BFS (int sr, int sc) {
         que.pop();
 ```
 
+6. ***isalpha 함수 사용시 주의할 점***
+
+- 빈 문자열을 검사할 시, out_of_range 런타이 에러르 뱉는다. 이유는, trim 과정에서 문자열이 제거되는 경우 때문!!
+
+```
+void trim(string &str) {
+    while (!isalpha(str.front())) {
+        *** if (str.empty()) break; ***
+        str = str.substr(1,-1);
+    }
+    while (!isalpha(str.back())) {
+        *** if (str.empty()) break; *** 
+        str.pop_back();
+    }
+}
+```
+
 -----
 
 ### cmp 함수 주의할 점!
