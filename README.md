@@ -210,6 +210,13 @@ for(int i = 0; i < que.size(); i++) {
 https://www.inflearn.com/questions/23817
 
 -----
+### Transform 함수를 사용해서 문자열을 대소문자로 변환 가능하다
+
+```
+transform(str.begin(), str.end(), str.begin(), ::tolower);
+```
+-----
+
 
 # JAVA
 -----
