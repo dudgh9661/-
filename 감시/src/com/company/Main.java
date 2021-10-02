@@ -94,15 +94,18 @@ public class Main {
     }
 
     static void cctvThree(int arrow, int cctvR, int cctvC) {
-        if (arrow == 0 || arrow == 3) { // default
+        if (arrow == 0) { // default
             move(3, cctvR, cctvC); //right
             move(1,cctvR, cctvC);
         } else if (arrow == 1) { // right rotation
             move(3, cctvR, cctvC); //right
             move(2, cctvR, cctvC); // down
         } else if (arrow == 2) {
-            move(1,cctvR, cctvC);
+            move(2,cctvR, cctvC);
             move(0,cctvR, cctvC);
+        } else if (arrow == 3) {
+            move(0,cctvR,cctvC);
+            move(1,cctvR,cctvC);
         }
     }
 
