@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kim_yeongho/Desktop/Desktop/practice/pr_1/빗물
+# Install script for directory: /Users/kim_yeongho/Desktop/Desktop/practice/빗물
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/kim_yeongho/Desktop/Desktop/practice/pr_1/빗물/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/kim_yeongho/Desktop/Desktop/practice/빗물/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
