@@ -234,6 +234,38 @@ transform(str.begin(), str.end(), str.begin(), ::tolower);
 ```
 -----
 
+<h3>Map 활용법</h3>
+
+Map의 value를 기준으로 정렬할 땐, vector를 이용한다.
+
+```
+map<string, int> mp;
+vector<pair<string, int>> vec(mp.begin(), mp.end(); // 바로 초기화 가능
+```
+
+**classic : {0, 800}, {1,200}
+pop : {3,200}, {2,500}과 같은 데이터를 Map을 사용해 저장하고 정렬하려면?**
+
+**map -> vector로 정렬 -> 다시 map에 insert**방법은 안된다.
+> map에 value로 정렬된 값으로 들어가지 않는다. key값으로 다시 재정렬된다.
+
+vector로 정렬한 순서대로 map의 원소에 꽂고 싶으면
+
+1. ***정렬된 순서의 key값을 원소로 갖는*** 임의의 vector를 1개 더 생성한다. 
+```
+vector<int> vecIdx 
+for (int i = 0; i < vecIdx.size(); i++) {
+    //mp[key][vecIdx[i]]를 하게 되면 vecIdx에 저장된 정렬 순으로 mp의 값들을 꺼내올 수 있다.
+}
+```
+
+2. 
+```
+ map<string, vector<pair<int,int>>> mp;
+ mp[key].push_back( each 정렬된 벡터값 );
+```
+-----
+
 
 # JAVA
 -----
