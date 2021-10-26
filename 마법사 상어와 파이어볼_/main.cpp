@@ -15,23 +15,29 @@ vector<fireball> originMap[51][51];
 
 // 범위 밖으로 벗어날 경우 -> 1행 <-> N번 행, 1열 <-> N번
 pair<int,int> inRange(int nr, int nc) {
+//    int resR = nr % N;
+//    if (resR < 0) resR += N;
+//
+//    int resC = nc % N;
+//    if (resC < 0) resC += N;
     int resR = nr, resC = nc;
-    if (nr == 0) resR = 3;
+
+    if (nr == 0) resR = N;
     else if ( nr < 0) {
-        if (abs(nr) % 3 == 0) resR = 3;
-        else resR = 3 - abs(nr) % 3;
+        if (abs(nr) % N == 0) resR = N;
+        else resR = N - abs(nr) % N;
     } else if (nr > N) {
-        if (nr % 3 == 0) resR = 3;
-        else resR = nr % 3;
+        if (nr % N == 0) resR = N;
+        else resR = nr % N;
     }
 
-    if (nc == 0) resC = 3;
+    if (nc == 0) resC = N;
     else if ( nc < 0) {
-        if (abs(nc) % 3 == 0) resC = 3;
-        else resC = 3 - abs(nc) % 3;
+        if (abs(nc) % N == 0) resC = N;
+        else resC = N - abs(nc) % N;
     } else if (nc > N) {
-        if (nc % 3 == 0) resC = 3;
-        else resC = nc % 3;
+        if (nc % N == 0) resC = N;
+        else resC = nc % N;
     }
 
     return {resR,resC};
@@ -40,8 +46,8 @@ pair<int,int> inRange(int nr, int nc) {
 void init() {
     cin >> N >> M >> K;
     int r,c,m,d,s;
-    for (int i = 0; i < K; i++) {
-        cin >> r >> c >> m >> d >> s;
+    for (int i = 0; i < M; i++) {
+        cin >> r >> c >> m >> s >> d;
         originMap[r][c].push_back({m,d,s});
     }
 }
@@ -66,21 +72,11 @@ void move() {
 void doSpread(int r, int c, int m, int s, bool isAllCondition) {
     if (isAllCondition) {
         for (int i = 0; i <= 6; i += 2) {
-            int nr = r + dir[i][0];
-            int nc = c + dir[i][1];
-            auto p = inRange(nr,nc);
-            nr = p.first;
-            nc = p.second;
-            tmpMap[nr][nc].push_back({m, i, s}); // 질량, 방향, 속도
+            tmpMap[r][c].push_back({m, i, s}); // 질량, 방향, 속도
         }
     } else {
         for (int i = 1; i <= 7; i += 2) {
-            int nr = r + dir[i][0];
-            int nc = c + dir[i][1];
-            auto p = inRange(nr,nc);
-            nr = p.first;
-            nc = p.second;
-            tmpMap[nr][nc].push_back({m, i, s}); // 질량, 방향, 속도
+            tmpMap[r][c].push_back({m, i, s}); // 질량, 방향, 속도
         }
     }
 }
@@ -88,7 +84,7 @@ void spread() {
     for (int i = 1; i <= N; i++) {
         for (int j = 1; j <= N; j++) {
             if (tmpMap[i][j].size() >= 2) {
-                int sumM  = 0;
+                int sumM = 0;
                 int sumS = 0;
                 bool isAllOdd = true;
                 bool isAllEven = true;
@@ -98,8 +94,8 @@ void spread() {
                     if (ball.d % 2 != 0) isAllEven = false;
                     else if (ball.d % 2 == 0) isAllOdd = false;
                 }
-                tmpMap[i][j].clear(); // 해당 좌표의 파이어볼 초기화
                 sumM /= 5; sumS /= (int)tmpMap[i][j].size();
+                tmpMap[i][j].clear(); // 해당 좌표의 파이어볼 초기화
                 if (sumM <= 0) continue;
                 // 4개의 파이어볼로 나누기
                 if (isAllOdd || isAllEven) {
@@ -110,15 +106,6 @@ void spread() {
             }
         }
     }
-}
-
-bool existMoreTwo() {
-    for (int i = 1; i <= N; i++) {
-        for (int j = 1; j <= N; j++) {
-            if (originMap[i][j].size() >= 2) return true;
-        }
-    }
-    return false;
 }
 
 void setInit() {
@@ -141,7 +128,7 @@ void getAns() {
             }
         }
     }
-    cout << "sum : " << sum << endl;
+    cout << sum << endl;
 }
 int main() {
     init();
