@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kim_yeongho/Desktop/Desktop/practice/nTest/1/main.cpp
+string
+-
+vector
+-
+iostream
+-
+unordered_map
+-
+set
+-
+

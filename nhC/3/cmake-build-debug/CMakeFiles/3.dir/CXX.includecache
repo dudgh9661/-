@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kim_yeongho/Desktop/Desktop/practice/nhC/3/main.cpp
+string
+-
+vector
+-
+map
+-
+iostream
+-
+algorithm
+-
+cstring
+-
+
