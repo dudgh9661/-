@@ -264,8 +264,12 @@ for (int i = 0; i < vecIdx.size(); i++) {
  map<string, vector<pair<int,int>>> mp;
  mp[key].push_back( each 정렬된 벡터값 );
 ```
------
 
+### :pill: map<int, map<int,int>> mp 사용법 ###
+
+https://www.geeksforgeeks.org/implementing-multidimensional-map-in-c/
+
+-----
 
 # JAVA
 -----
