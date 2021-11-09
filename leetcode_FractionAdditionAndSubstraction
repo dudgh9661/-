@@ -1,0 +1,81 @@
+class Solution {
+public:
+    vector<pair<int,int>> info;
+    int getLCM() {
+        int res = 1;
+        for(auto p : info) {
+            int num = p.second;
+            // cout << " num : " << num << endl;
+            if (num == 0) continue;
+            res = lcm(res,num);
+        }
+        
+        // cout << "최소공배수 : " << res << endl;
+        return res;
+    }
+    
+    void getRes(int resLCM) {
+        for (auto& p : info) {
+            int f = p.first;
+            int s = p.second;
+            p.first = (resLCM / s) * f;
+            p.second = resLCM;
+        }
+    }
+    
+    int getNum(queue<char> que) {
+        string res = "";
+        while (!que.empty()) {
+            res += que.front();
+            que.pop();
+        }
+        return stoi(res);
+    }
+    
+    void getInfo(string exp) {
+        queue<char> que;
+        bool flag = false;
+        pair<int,int> p;
+        
+        for (int i = 0; i < exp.length(); i++) {
+            char ch = exp[i];
+            if (ch == '/') {
+                flag = true;
+                p.first = getNum(que);
+                que = queue<char>();
+                continue;
+            } else if (flag && isdigit(ch)) {
+                que.push(ch);
+                if (isdigit(exp[i+1])) {
+                    que.push(exp[i+1]);
+                    i++;
+                }
+                p.second = getNum(que);
+                info.push_back(p);
+                flag = false;
+                p = pair<int,int>();
+                que = queue<char>();
+                continue;
+            }
+            que.push(ch);
+        }
+    }
+    
+    string fractionAddition(string expression) {
+        getInfo(expression);
+        int resLCM = getLCM();
+        getRes(resLCM);
+        
+        int sum = 0;
+        for(auto p : info) {
+            // cout << p.first << " / " << p.second << endl;
+            sum += p.first;
+        }
+        
+        string res = "";
+        // cout << "분자 : " << sum << " 분모 : " << resLCM << endl;
+        int resGCD = gcd(sum, resLCM);
+        res = to_string(sum/resGCD) + "/" + to_string(resLCM/resGCD);
+        return res;
+    }
+};
