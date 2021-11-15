@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
+answer = sol(m);using namespace std;
 
 // output : 가장 큰 홀수와 짝수의 합을 리턴해라.
 int solution(vector<int> &A) {
