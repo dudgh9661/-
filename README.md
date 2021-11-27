@@ -270,7 +270,12 @@ for (int i = 0; i < vecIdx.size(); i++) {
 https://www.geeksforgeeks.org/implementing-multidimensional-map-in-c/
 
 -----
+ 
+ ### :pill: 문자열 파싱 함수 (istreamstring, ostreamstring, stringstream)
 
+https://myprivatestudy.tistory.com/48
+
+-----
 # JAVA
 -----
 ### vector<int> vec[]와 같이, ArrayList를 선언하는 법
