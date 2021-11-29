@@ -276,6 +276,14 @@ https://www.geeksforgeeks.org/implementing-multidimensional-map-in-c/
 https://myprivatestudy.tistory.com/48
 
 -----
+
+### leetcode_TargetSum 문제를 통해 배운 것
+
+to_string() -> stoi() 즉, '문자->숫자->문자' 변환과정으로 인해, 깊이가 깊은 DFS의 경우 '시간초과'가 날 수 있다. 
+
+해당 문제의 코드를 참고하여, 변환과정을 거치지 않아도 되는 방식을 다시 한번 기억하자.
+
+-----
 # JAVA
 -----
 ### vector<int> vec[]와 같이, ArrayList를 선언하는 법
