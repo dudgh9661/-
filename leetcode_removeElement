@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int ans = 0;
+        int S = 0;
+        int E = nums.size() - 1;
+        
+        while (S <= E) {
+            if (nums[S] == val) {
+                swap(nums[S], nums[E]);
+                E--;
+            } else {
+                S++;
+                ans++;
+            }
+        }
+        
+        // cout << "ans : " << ans << endl;
+        return ans;
+    }
+};
