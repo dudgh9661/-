@@ -325,4 +325,9 @@ PriorityQueue<node> pq = new PriorityQueue<>(new Comparator<node>() {
 ex) 0.1xxxxxxxxxxx인 경우 컴퓨터는 0.1로 표시, 즉, 0.1 * 100은 10이 되야하지만, 9.999999999와 같은 값을 갖게 되는 '오류'가 발생한다.
 
 <h3>따라서 해당 소숫점 데이터를 다룰 땐 주의해야한다!!</h3>
+	
+-----
+### Intger Object는 Object인데 왜 == 연산 결과가 가끔 true일까??
+
+> https://dororongju.tistory.com/138
 
