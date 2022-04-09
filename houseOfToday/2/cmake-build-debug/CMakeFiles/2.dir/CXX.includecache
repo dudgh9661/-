@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kim_yeongho/Desktop/Desktop/practice/houseOfToday/2/main.cpp
+iostream
+-
+string
+-
+vector
+-
+unordered_map
+-
+unordered_set
+-
+algorithm
+-
+
